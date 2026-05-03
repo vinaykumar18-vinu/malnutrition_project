@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+<h1>Explore Our Features</h1>
+
+<div class="image-container">
+<img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data analytics and health monitoring">
+</div>
+
+<div class="card">
+    <h3>Predictive Modeling</h3>
+    <p>Advanced AI algorithms analyze child health metrics to predict malnutrition risk with high accuracy. Our model continuously learns and improves from new data.</p>
+</div>
+
+<div class="card">
+    <h3>Health Monitoring</h3>
+    <p>Track child growth patterns over time with comprehensive BMI calculations and developmental milestone monitoring for holistic health assessment.</p>
+</div>
+
+<div class="card">
+    <h3>Early Intervention</h3>
+    <p>Receive timely alerts and recommendations for nutritional support, enabling healthcare providers to intervene before malnutrition becomes severe.</p>
+</div>
+
+<div class="card">
+    <h3>Data-Driven Insights</h3>
+    <p>Generate detailed reports with actionable insights for parents, caregivers, and healthcare professionals to make informed decisions about child nutrition.</p>
+</div>
+
+<div class="info-card">
+<h3>Key Health Indicators We Monitor</h3>
+<ul style="color: #cbd5e1; padding-left: 1.5rem;">
+    <li><strong>Age:</strong> Critical factor in growth velocity and nutritional requirements</li>
+    <li><strong>Weight:</strong> Primary indicator of nutritional status and growth</li>
+    <li><strong>Height:</strong> Essential for BMI calculation and growth assessment</li>
+    <li><strong>MUAC:</strong> Mid-upper arm circumference for acute malnutrition detection</li>
+    <li><strong>BMI:</strong> Body mass index for overall nutritional health evaluation</li>
+</ul>
+</div>
+
+<div class="info-card">
+<h3>WHO Classification Standards</h3>
+<p>Our system follows World Health Organization guidelines for malnutrition classification:</p>
+<ul style="color: #cbd5e1; padding-left: 1.5rem;">
+    <li><strong>Normal:</strong> BMI appropriate for age and height</li>
+    <li><strong>Moderate Malnutrition:</strong> Requires nutritional support and monitoring</li>
+    <li><strong>Severe Malnutrition:</strong> Immediate medical intervention needed</li>
+</ul>
+</div>
+</div>
+{% endblock %}

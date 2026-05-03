@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+<div class="form-box">
+
+<h2>Assessment Results</h2>
+
+<div style="text-align: center; margin: 2rem 0;">
+<h1 style="font-size: 3rem; margin-bottom: 1rem;">{{ prediction }}</h1>
+<p style="color: #94a3b8; font-size: 1.1rem;">BMI: {{ bmi }}</p>
+</div>
+
+<div class="info-card" style="margin: 2rem 0;">
+<h3>📊 Understanding Your Results</h3>
+{% if 'Normal' in prediction %}
+<p style="color: #10b981;">✅ Your child appears to be in good nutritional health. Continue with balanced nutrition and regular health check-ups.</p>
+{% elif 'Moderate' in prediction %}
+<p style="color: #f59e0b;">⚠️ Moderate malnutrition detected. Consult a healthcare provider for nutritional guidance and monitoring.</p>
+{% else %}
+<p style="color: #ef4444;">🚨 Severe malnutrition detected. Immediate medical attention is required. Please consult a healthcare professional urgently.</p>
+{% endif %}
+</div>
+
+<div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+<a href="{{ url_for('predict') }}" style="flex: 1;">
+<button style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">🔄 New Assessment</button>
+</a>
+<a href="{{ url_for('explore') }}" style="flex: 1;">
+<button style="background: linear-gradient(135deg, #8b5cf6, #a855f7);">📚 Learn More</button>
+</a>
+</div>
+
+</div>
+
+<div class="info-card">
+<h3>🩺 Next Steps</h3>
+<ul style="color: #cbd5e1; padding-left: 1.5rem;">
+    <li><strong>For Normal Results:</strong> Maintain current healthy practices and schedule regular check-ups</li>
+    <li><strong>For Moderate Cases:</strong> Increase nutrient-rich foods and consult a pediatrician</li>
+    <li><strong>For Severe Cases:</strong> Seek immediate medical care and nutritional rehabilitation</li>
+    <li><strong>All Cases:</strong> Track growth regularly and maintain vaccination schedules</li>
+</ul>
+</div>
+</div>
+{% endblock %}

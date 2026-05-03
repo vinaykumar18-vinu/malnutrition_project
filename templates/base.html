@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Malnutrition AI</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+<h2>Malnutrition AI</h2>
+<div>
+<a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('about') }}">About</a>
+<a href="{{ url_for('explore') }}">Explore</a>
+<a href="{{ url_for('predict') }}">Predict</a>
+</div>
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
